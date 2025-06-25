@@ -6,9 +6,9 @@ spring:
   application:
     name: git-service
   datasource:
-    url: jdbc:mysql://mysql.tts.svc.cluster.local:3306/Git_service_db
+    url: jdbc:mysql://localhost:3306/Git_service_db
     username: ${DB_USERNAME:root}
-    password: Root@1234
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   
   autoconfigure:
