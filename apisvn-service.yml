@@ -1,6 +1,6 @@
 server:
   port: 8083
-  # address: 10.226.25.31
+  address: 10.226.25.31
 
 spring:
   application:
@@ -28,11 +28,4 @@ logging:
     org.springframework.web: INFO
     com.svn: DEBUG
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://ttsdashboard.com:8761/eureka
+
