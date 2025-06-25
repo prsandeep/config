@@ -1,6 +1,6 @@
 server:
   port: 8080
-  # address: 10.226.25.31
+  address: 10.226.25.31
 
 spring:
   application:
