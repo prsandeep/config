@@ -1,6 +1,6 @@
 server:
   port: 8762
-  # address: 10.226.25.31
+  address: 10.226.25.31
 
 spring:
   application:
@@ -16,7 +16,7 @@ eureka:
     register-with-eureka: false  # This is a Eureka server; it should not register itself
     fetch-registry: false
     service-url:
-      defaultZone: http://service-registry-tts:8762/eureka/  # Internal K8s service name
+      defaultZone: http://ttsdashboard.com:8761/eureka  # Internal K8s service name
 
   server:
     enable-self-preservation: false
