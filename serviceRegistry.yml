@@ -1,0 +1,45 @@
+server:
+  port: 8762
+  # address: 10.226.25.31
+
+spring:
+  application:
+    name: serviceRegistry  # This name should match the config in other services
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info
+
+  client:
+    register-with-eureka: false  # This is a Eureka server; it should not register itself
+    fetch-registry: false
+    service-url:
+      defaultZone: http://service-registry-tts:8762/eureka/  # Internal K8s service name
+
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
+    renewal-percent-threshold: 0.85
+    number-of-replication-retries: 0
+    max-elements-in-peer-replication-pool: 0
+    response-cache-auto-expiration-in-seconds: 30
+    response-cache-update-interval-ms: 15000
+    enable-dashboard: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, env, eureka, metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.netflix.eureka.cluster.ReplicationTaskProcessor: WARN
+    com.netflix.eureka.registry.AbstractInstanceRegistry: INFO
+    com.netflix.discovery: INFO
+    root: INFO

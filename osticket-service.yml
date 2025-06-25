@@ -1,0 +1,14 @@
+superset:
+  url: https://bidarshan-dev.dcservices.in/login/
+  username: GC-TTS
+  password: 250671
+
+server:
+  port: 8089
+  #address: 10.226.25.31 # Replace with a valid IP
+
+
+spring:
+ autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+
