@@ -1,42 +1,47 @@
 server:
-  port: 8762
+  port: 8761
   address: 10.226.25.31
 
 spring:
   application:
-    name: serviceRegistry  # This name should match the config in other services
+    name: serviceRegistry
 
 eureka:
   instance:
+    hostname: 10.226.25.31
+    # Ensure the instance uses the correct IP
+    ip-address: 10.226.25.31
     prefer-ip-address: true
+    # Health check configuration
     health-check-url-path: /actuator/health
     status-page-url-path: /actuator/info
-
   client:
-    register-with-eureka: false  # This is a Eureka server; it should not register itself
+    # Disable registration with itself (standalone mode)
     fetch-registry: false
+    register-with-eureka: false
+    # Critical: Set the correct service URL to prevent localhost connections
     service-url:
-      defaultZone: http://ttsdashboard.com:8761/eureka  # Internal K8s service name
-
+      defaultZone: http://10.226.25.31:8761/eureka/
   server:
+    # Disable self-preservation for development
     enable-self-preservation: false
-    eviction-interval-timer-in-ms: 10000
+    # Prevent peer node updates that cause connection errors
     renewal-percent-threshold: 0.85
+    # Disable sync with other Eureka nodes
     number-of-replication-retries: 0
     max-elements-in-peer-replication-pool: 0
-    response-cache-auto-expiration-in-seconds: 30
-    response-cache-update-interval-ms: 15000
-    enable-dashboard: true
 
+# Management endpoints for monitoring
 management:
   endpoints:
     web:
       exposure:
-        include: health, info, env, eureka, metrics
+        include: health,info,env,eureka
   endpoint:
     health:
       show-details: always
 
+# Logging configuration to reduce noise
 logging:
   level:
     com.netflix.eureka.cluster.ReplicationTaskProcessor: WARN
