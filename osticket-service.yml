@@ -1,7 +1,7 @@
 superset:
-  url: https://bidarshan-dev.dcservices.in/
-  username: GC-TTS
-  password: 250671
+ url: http://10.226.30.123:8088
+ username: guest
+ password: 12345
 
 server:
   port: 8089
