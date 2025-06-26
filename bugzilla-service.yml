@@ -1,8 +1,16 @@
+# superset:
+#   url: https://bidarshan-dev.dcservices.in/
+#   username: GC-TTS
+#   password: 250671
+  
 superset:
   url: https://bidarshan-dev.dcservices.in/
   username: GC-TTS
   password: 250671
-
+  first_name: devender
+  last-name: singh
+  email: devendersingh@cdac.in
+  
 server:
   port: 8088
   address: 10.226.25.31 # Replace with a valid IP
