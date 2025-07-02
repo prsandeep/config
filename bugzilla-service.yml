@@ -3,13 +3,21 @@
 #   username: GC-TTS
 #   password: 250671
   
+# superset:
+#   url: https://bidarshan-dev.dcservices.in/
+#   username: GC-TTS
+#   password: 250671
+#   first_name: devender
+#   last-name: singh
+#   email: devendersingh@cdac.in
+
 superset:
-  url: https://bidarshan-dev.dcservices.in/
-  username: GC-TTS
-  password: 250671
-  first_name: devender
-  last-name: singh
-  email: devendersingh@cdac.in
+ url: http://10.226.30.123:8088
+ username: guest
+ password: 12345
+ first_name: Guest
+ last-name: user
+ email: guest@gmail.com
   
 server:
   port: 8088
