@@ -30,7 +30,7 @@ spring:
         - id: bugzilla-service
           uri: lb://BUGZILLA-SERVICE
           predicates:
-            - Path=/api/superset/**
+            - Path=/api/superset/**, /api/debug/jwt-payload**
 
         - id: osticket-service
           uri: lb://OSTICKET-SERVICE
