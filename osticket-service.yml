@@ -1,6 +1,6 @@
 superset:
  url: http://10.226.30.23:8088
- username: guest
+ username: guest-guest
  password: 12345
  first_name: Guest
  last-name: user
