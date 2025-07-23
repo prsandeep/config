@@ -12,12 +12,12 @@
 #   email: devendersingh@cdac.in
 
 superset:
- url: http://10.226.30.23:8088
- username: guest
- password: 12345
- first_name: Guest
- last-name: user
- email: guest@gmail.com
+ url: https://bidarshan.dcservices.in/
+ username: embed-CGHS
+ password: embed
+ # first_name: Guest
+ # last-name: user
+ # email: guest@gmail.com
   
 server:
   port: 8088
