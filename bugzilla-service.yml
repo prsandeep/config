@@ -3,13 +3,13 @@
 #   username: GC-TTS
 #   password: 250671
   
-# superset:
-#   url: https://bidarshan-dev.dcservices.in/
-#   username: GC-TTS
-#   password: 250671
-#   first_name: devender
-#   last-name: singh
-#   email: devendersingh@cdac.in
+superset:
+  url: https://bidarshan-dev.dcservices.in/
+  username: guest
+  password: guest
+  first_name: devender
+  last-name: singh
+  email: devendersingh@cdac.in
 
 # superset:
  # url: https://bidarshan.dcservices.in/
@@ -20,13 +20,13 @@
  # email: guest@gmail.com
 
 
- superset:
-   url:  https://tts-portalbi.dcservices.in
-   username: guest-guest
-   password: 12345
-   first_name: Guest
-   last-name: user
-   email: guest@gmail.com
+ # superset:
+ #   url:  https://tts-portalbi.dcservices.in
+ #   username: guest
+ #   password: 12345
+ #   first_name: Guest
+ #   last-name: user
+ #   email: guest@gmail.com
     
 server:
   port: 8088
