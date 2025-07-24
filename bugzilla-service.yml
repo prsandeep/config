@@ -21,7 +21,7 @@
 
 
  superset:
-   url: http://10.226.30.23:8088
+   url:  https://tts-portalbi.dcservices.in
    username: guest-guest
    password: 12345
    first_name: Guest
