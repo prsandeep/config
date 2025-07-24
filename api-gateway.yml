@@ -1,6 +1,6 @@
 server:
-  port: 8092
-  address: tts-gateway.dcservices.in
+  port: 8080
+  address: 10.226.25.31
 
 spring:
   application:
