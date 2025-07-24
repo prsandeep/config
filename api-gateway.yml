@@ -35,7 +35,12 @@ spring:
         - id: osticket-service
           uri: lb://OSTICKET-SERVICE
           predicates:
-            - Path=/api/osticket/**    
+            - Path=/api/osticket/**
+
+        - id: HEALTHINFO
+          uri: lb://HEALTHINFO
+          predicates:
+            - Path=/api/health/**      
 
 logging:
   level:
