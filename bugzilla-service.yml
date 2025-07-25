@@ -30,7 +30,7 @@ superset:
     
 server:
   port: 8088
-  address: 10.226.25.31 # Replace with a valid IP
+  # address: 10.226.25.31 # Replace with a valid IP
 
 
 spring:
