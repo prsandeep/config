@@ -13,7 +13,7 @@ spring:
     gateway:
       routes:
         - id: auth-service
-          uri: lb://AUTH-SERVICE  # Fixed capitalization to match Eureka registration
+          uri: lb://AUTH-SERVICE
           predicates:
             - Path=/api/auth/**, /api/users/**
           
@@ -30,17 +30,22 @@ spring:
         - id: bugzilla-service
           uri: lb://BUGZILLA-SERVICE
           predicates:
-            - Path=/api/superset/**, /api/debug/jwt-payload**
-
+            - Path=/api/superset/**, /api/debug/jwt-payload/**
+          
         - id: osticket-service
           uri: lb://OSTICKET-SERVICE
           predicates:
             - Path=/api/osticket/**
 
-        - id: HEALTHINFO
+        - id: healthinfo-service
           uri: lb://HEALTHINFO
           predicates:
             - Path=/api/health/**      
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090 # Admin server URL
 
 logging:
   level:
@@ -52,7 +57,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics,gateway
+        include: "*"
   endpoint:
+    health:
+      show-details: always
     gateway:
       enabled: true
