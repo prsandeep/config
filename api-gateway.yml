@@ -42,16 +42,16 @@ spring:
           predicates:
             - Path=/api/health/**      
 
-  boot:
-    admin:
-      client:
-        url: http://localhost:9090 # Admin server URL
+  # boot:
+  #   admin:
+  #     client:
+  #       url: http://localhost:9090 # Admin server URL
 
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    org.springframework.web.reactive: DEBUG
-    reactor.netty: DEBUG
+# logging:
+#   level:
+#     org.springframework.cloud.gateway: DEBUG
+#     org.springframework.web.reactive: DEBUG
+#     reactor.netty: DEBUG
 
 management:
   endpoints:
